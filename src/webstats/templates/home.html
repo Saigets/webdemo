@@ -22,9 +22,9 @@
     <main>
       time {{ time }} {{ tz }} <br><br>
       Hostname {{ request.get_host }} <br><br>
-      connected from {{ request.META.REMOTE_ADDR}} <br>
+      connected from {{ request.META.HTTP_X_FORWARDED_FOR }} {{ request.META.HTTP_X_REAL_IP }} <br>
+      {{ request.META.REMOTE_ADDR}} <br>
       {{ request.META.HTTP_USER_AGENT }} <br><br>
-
 
       <!-- {{ request.session }} -->
       <!-- {{ requesst.scheme }} -->
